@@ -1,7 +1,8 @@
+const { logger } = require('../utils/logger');
+
 module.exports = function(err, _req, res, next) {
-  if (res.headersSent) {
-    return next(err);
-  }
-  res.status(500);
-  res.render('error', { error: err });
+  logger.error(err.message);
+  res.status(err.status || 500);
+  res.json(err);
+  res.end();
 };

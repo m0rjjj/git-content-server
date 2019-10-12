@@ -9,9 +9,8 @@ const errorMiddleware = require('./middleware/errorMiddleware');
 const runServer = async () => {
   const repository = await Git.Repository.open(REPO_PATH);
   const app = express();
-  app.use(errorMiddleware);
-
   app.use('/', Routes({ repository, logger }));
+  app.use(errorMiddleware);
   app.listen(PORT, () => logger.info(`Listening on port ${PORT}!`));
 };
 
