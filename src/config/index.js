@@ -1,4 +1,5 @@
 module.exports = {
   REMOTE_URL: 'https://github.com/m0rjjj/git-content',
-  REPO_PATH: 'repo'
+  REPO_PATH: 'repo',
+  PORT: 3000
 };
