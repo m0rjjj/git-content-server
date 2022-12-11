@@ -12,7 +12,7 @@
   "dependencies": {
     "bunyan": "^1.8.12",
     "eslint": "^6.5.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nodegit": "^0.26.2",
     "prettier": "^1.18.2"
   },
